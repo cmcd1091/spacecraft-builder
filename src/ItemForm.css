@@ -1,0 +1,23 @@
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-box {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.purpose-box {
+  padding-bottom: 4rem;
+}
+
+#add-btn-container {
+  display: flex;
+  justify-content: end;
+}

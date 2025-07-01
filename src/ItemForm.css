@@ -7,17 +7,30 @@ input:focus {
 }
 
 .input-box {
-  border: 1px solid black;
+  border: 2px solid black;
   margin-bottom: 1rem;
   display: flex;
-  align-items: center;
 }
 
 .purpose-box {
+  border: 2px solid black;
+  margin-bottom: 1rem;
   padding-bottom: 4rem;
 }
 
 #add-btn-container {
   display: flex;
   justify-content: end;
+}
+
+.error {
+  border: 2px solid red;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.purpose-error {
+  border: 2px solid red;
+  margin-bottom: 1rem;
+  padding-bottom: 4rem;
 }

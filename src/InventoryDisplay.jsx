@@ -1,10 +1,17 @@
 import ItemCard from './ItemCard';
+import ItemAction from './ItemAction';
+import './InventoryDisplay.css'
 
-const InventoryDisplay = ({ inventory }) => {  
+const InventoryDisplay = ({ inventory, deleteItem }) => {  
   
   return (
     <div>
-      {inventory.map(item => <ItemCard itemName={item.itemName} quantity={item.quantity} purpose={item.purpose} />)}
+      {inventory.map(item => 
+      <div className="item-container">
+        <ItemCard itemName={item.itemName} quantity={item.quantity} purpose={item.purpose} />
+        <ItemAction deleteItem={() => deleteItem(item.itemName)}/>
+      </div>
+      )}
     </div>
   )
 }

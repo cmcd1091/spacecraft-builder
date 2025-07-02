@@ -11,12 +11,16 @@ const SpacecraftBuilder = () => {
       { itemName, quantity, purpose }
     ])
   }
+
+  const deleteItem = (itemName) => {
+    setInventory(prev => prev.filter(item => item.itemName !== itemName))
+  }
   
   return (
     <>
       <ItemForm addItem={addItem}/>
       <h2>Inventory</h2>
-      <InventoryDisplay inventory={inventory}/>
+      <InventoryDisplay inventory={inventory} deleteItem={deleteItem}/>
     </>
   )
 }
